@@ -12,7 +12,7 @@ displayBtn.addEventListener('click', function(){
         overlay = !overlay
     } else if (overlay){
         navOverlay.style.animation = 'openNav 1s reverse'
-        navOverlay.style.display = 'none'    
+        navOverlay.style.display = 'none'
         overlay = false
     }
 })
