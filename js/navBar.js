@@ -7,12 +7,12 @@ overlay = false
 
 displayBtn.addEventListener('click', function(){
     if (overlay === false){
-        navOverlay.style.display = 'block'
-        navOverlay.style.animation = 'openNav 1s'
+        displayBtn.style.rotate = '90deg'
+        navOverlay.style.transform = 'translateY(0%)'
         overlay = !overlay
     } else if (overlay){
-        navOverlay.style.animation = 'openNav 1s reverse'
-        navOverlay.style.display = 'none'
+        displayBtn.style.rotate = ''
+        navOverlay.style.transform = 'translateY(-100%)'
         overlay = false
     }
 })
