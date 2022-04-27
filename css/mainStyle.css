@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+:root{
+    --lightBlue1: #0466C8;
+    --lightBlue2: #0353A4;
+    --lightBlue3: #023E7D;
+    --darkBlue1: #002855;
+    --darkBlue2: #001845;
+    --darkBlue3: #001233;
+    --gray1: #33415C;
+    --gray2: #5C677D;
+    --gray3: #7D8597;
+    --gray4: #979DAC;
+}
+
+/* Landing page decorations */
+
+.navLinks {
+    width: 65%;
+    margin: 0 auto;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    top: 25%;
+}
+
+.overlayNav{
+    display: none;
+    width: 30%;
+    height: 8%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Icon & Links */
+
+.navLinks a{
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.navLinks a:hover, 
+.navLinks a:focus{
+    color: #c4c4c4;
+} 
+
+.fa-bars{
+    color: #fff;
+    border-radius: 3px;
+    font-size: 2rem;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+}
+
+.fa-bars:hover, 
+.fa-bars:focus{
+    cursor: pointer;
+    color: #c4c4c4;
+}
+
+
+
+            /* Section 1 / Landing page */
+
+#section-one{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+    /* Left page */
+
+#section-one .picture{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/milad-fakurian.jpg);
+    background-size: cover;
+    background-attachment: local;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#logo{
+    color: #fff;
+    font-size: 5rem;
+    width: 50%;
+    text-align: center;
+    letter-spacing: 20px;
+}
+#logo p{
+    margin-top: -10px;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    font-size: 1rem;
+}
+
+    /* Right page */
+
+#section-one .presentation{
+    display: none;
+    padding: 0 10px;
+    width: 70%;
+    text-align: center;
+    animation: clarifyPresentation 1s;
+}
+
+#section-one h2{
+    margin: 30px auto;
+    padding: 15px 0;
+    font-size: 3rem;
+    border-top: 2px solid #c4c4c4;
+    border-bottom: 2px solid #c4c4c4;
+    width: 60%;
+}
+
+
+    /* Boxes introducing the activity */
+
+#section-one #boxes{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+#section-one #presentBox{
+    width: 250px;
+    margin: 0 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5%;
+    color: var(--darkBlue2);
+    transition: all 0.2s ease;
+}
+
+#presentBox:hover,
+#presentBox:focus{
+    cursor: pointer;
+    box-shadow: 1px 1px 5px var(--darkBlue1);
+}
+
+#presentBox i{
+    margin-top: 10px;
+    font-size: 2.5rem
+}
+
+#presentBox h3{
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+#presentBox p{
+    padding: 15px;
+    font-size: 15px;
+}
+
+            /* Animations */
+
+
+    /* Animation for NavBar */
+@keyframes openNav {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+    /* Animation for landing page */
+@keyframes slideWelcomePage {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 30%;
+    }
+}
+
+@keyframes clarifyPresentation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
