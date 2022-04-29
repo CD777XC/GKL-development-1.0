@@ -23,7 +23,7 @@
 /* Landing page decorations */
 
 .navLinks {
-    width: 65%;
+    width: 90%;
     margin: 0 auto;
     font-size: 24px;
     text-align: center;
@@ -53,11 +53,14 @@
     transition: all 0.5s ease;
 }
 
-.navLinks a:hover, 
-.navLinks a:focus{
+.navLinks a:hover{
     color: #000;
     background-color: #fff;
 } 
+.navLinks a:focus{
+    color: #000;
+    text-decoration: underline;
+}
 
 .fa-bars{
     color: #fff;
