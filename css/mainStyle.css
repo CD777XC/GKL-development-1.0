@@ -84,7 +84,6 @@
 
 #section-one{
     display: flex;
-    flex-direction: row;
     text-align: center;
 }
 
