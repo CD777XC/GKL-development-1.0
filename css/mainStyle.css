@@ -24,10 +24,50 @@
     --gray4: #979DAC;
 }
 
+            /* Section 1 / Landing page */
+
+#section-one{
+/* Visual */
+    height: 100vh;
+    width: 100%;
+/* Flexbox */
+    display: flex;
+    text-align: center;
+}
+
+    /* Left page */
+
+#section-one .picture{
+/* Visual */
+    width: 30%;
+    background-image: url(/img/Backgrounds/left-landing.jpg);
+    background-size: cover;
+    background-attachment: local;
+}
+
+#logo{
+    margin: 0 auto;
+    width: 70%;
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+    letter-spacing: 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#logo p{
+    margin-top: -10px;
+    text-align: center;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    font-size: 1rem;
+}
+
 /* Landing page decorations */
 
 .navLinks {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     font-size: 1.5rem;
     text-align: center;
@@ -35,11 +75,12 @@
     top: 25%;
 }
 
-.overlayNav{
-    display: block;
+.overlayNav {
     width: 30%;
+    display: block;
     height: 8%;
     position: absolute;
+    top: 0%;
     background-color: rgba(0, 0, 0, 0.5);
     transform: translateY(-100%);
     transition: all 1s ease;
@@ -48,7 +89,7 @@
 
 /* Icon & Links */
 
-.navLinks a{
+.navLinks a {
     padding: .2em .7em;
     color: #fff;
     border-radius: 3px;
@@ -57,16 +98,17 @@
     transition: all 0.5s ease;
 }
 
-.navLinks a:hover{
+.navLinks a:hover {
     color: #000;
     background-color: #fff;
-} 
-.navLinks a:focus{
+}
+
+.navLinks a:focus {
     color: #000;
     text-decoration: underline;
 }
 
-.fa-bars{
+.fa-bars {
     color: #fff;
     border-radius: 3px;
     font-size: 2rem;
@@ -77,82 +119,55 @@
     animation: highlightIcon 3s infinite;
 }
 
-.fa-bars:hover, 
-.fa-bars:focus{
+.fa-bars:hover,
+.fa-bars:focus {
     cursor: pointer;
     color: #c4c4c4;
-}
-
-            /* Section 1 / Landing page */
-
-#section-one{
-    display: flex;
-    text-align: center;
-}
-
-    /* Left page */
-
-#section-one .picture{
-    width: 100%;
-    height: 100vh;
-    background-image: url(/img/Backgrounds/left-landing.jpg);
-    background-size: cover;
-    background-attachment: local;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-}
-
-#logo{
-    color: #fff;
-    font-size: 5rem;
-    width: 50%;
-    text-align: center;
-    letter-spacing: 20px;
-}
-#logo p{
-    margin-top: -10px;
-    letter-spacing: 3px;
-    word-spacing: 10px;
-    font-size: 1rem;
 }
 
     /* Right page */
 
 #section-one .presentation{
+/* Visual */
     display: none;
     padding: 0 10px;
     width: 70%;
+    height: 100vh;
+/* Flexbox (after loaded) */
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: center;
+/* Transitions & animations */
     animation: clarifyPresentation 1s;
 }
 
 #section-one .intro{
+/* Visual */
+    height: 45%;
     width: 100%;
-    height: 40vh;
-    margin: 1.2em;
+/* Flexbox */
     display: flex;
     text-align: center;
-    align-items: center;
     justify-content: space-evenly;
 }
 
 .intro .wrap{
-    color: var(--darkBlue1);
+/* Visual */
     width: 40%;
-    height: 50%;
+    height: 100%;
+/* Flexbox */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+/* Border & text */
+    color: var(--darkBlue1);
 }
 
 #section-one #boxes{
+/* Visual */
+    height: 45%;
     width: 100%;
-    height: 40vh;
-    margin: 1.2em;
+/* Flexbox */
     display: flex;
     text-align: center;
     justify-content: space-evenly;
@@ -162,6 +177,8 @@
 
 .intro h2{
     font-size: 2.5rem;
+    padding-bottom: 0.9em;
+    border-bottom: 1px solid var(--darkBlue1);
 }
 
 .intro p {
@@ -169,19 +186,29 @@
 }
 
 .intro img{
-    width: 40%;
+    width: 100%;
+    max-width: 100%;
 }
 
     /* Boxes introducing the activity */
 
 
 #section-one #presentBox{
-    border: 1px solid var(--darkBlue1);
+/* Visual */
     width: 20%;
-    margin: 0 0.75em;
-    padding: 0.75 0;
-    border-radius: 3%;
+    height: 90%;
+    padding: 2em 0;
+    margin: 0 auto;
+/* Flexbox */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+/* Border & text */
     color: var(--darkBlue1);
+    border: 1px solid var(--darkBlue1);
+    border-radius: 3%;
+/* Transitions & animations */
     transition: all 0.2s ease-in-out;
 }
 
@@ -191,11 +218,11 @@
 }
 
 #presentBox i{
-    width: 30%;
-    padding: 1.2rem 0;
+    margin: 0 auto;
+    width: 2em;
+    padding: 0.5em 0;
     border-radius: 50%;
     color: #fff;
-    margin: 1.2rem;
     font-size: 2.5rem;
     background-color: var(--darkBlue1);
 }
@@ -210,7 +237,7 @@
 }
 
 #presentBox button{
-    margin: 1.2rem;
+    margin: 0 auto;
     background-color: var(--darkBlue1);
     color: #fff;
     border: none;
@@ -225,7 +252,6 @@
 #presentBox #box-btn:hover, 
 #presentBox #box-btn:focus{
     background-color: #fff;
-    border: 2px solid var(--darkBlue1);
     color: var(--darkBlue1);
 } 
 
@@ -261,5 +287,15 @@
     }
     100%{
         opacity: 1;
+    }
+}
+
+
+    /* Media queries */
+
+@media (max-width: 1600px) {
+    .navLinks{
+        text-align: center;
+        font-size: 1.25rem;
     }
 }
