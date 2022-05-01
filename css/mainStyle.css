@@ -4,7 +4,11 @@
     box-sizing: border-box;
     font-family: 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
     scroll-behavior: smooth;
-    scrollbar-width: 0;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar{
+    display: none;
 }
 
 :root{
