@@ -164,6 +164,10 @@
     font-size: 2.5rem;
 }
 
+.intro p {
+    margin-top: 2rem;
+}
+
 .intro img{
     width: 40%;
 }
