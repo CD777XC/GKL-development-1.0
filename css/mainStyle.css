@@ -25,7 +25,7 @@
 .navLinks {
     width: 90%;
     margin: 0 auto;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
     position: relative;
     top: 25%;
@@ -70,6 +70,7 @@
     top: 2%;
     left: 1%;
     transition: all 1s ease;
+    animation: highlightIcon 3s infinite;
 }
 
 .fa-bars:hover, 
@@ -77,8 +78,6 @@
     cursor: pointer;
     color: #c4c4c4;
 }
-
-
 
             /* Section 1 / Landing page */
 
@@ -92,7 +91,7 @@
 #section-one .picture{
     width: 100%;
     height: 100vh;
-    background-image: url(/img/milad-fakurian.jpg);
+    background-image: url(/img/Backgrounds/left-landing.jpg);
     background-size: cover;
     background-attachment: local;
     display: flex;
@@ -121,41 +120,66 @@
     display: none;
     padding: 0 10px;
     width: 70%;
+    flex-direction: column;
+    justify-content: space-evenly;
     text-align: center;
     animation: clarifyPresentation 1s;
 }
 
-#section-one h2{
-    margin: 30px auto;
-    padding: 15px 0;
-    font-size: 3rem;
-    border-top: 2px solid #c4c4c4;
-    border-bottom: 2px solid #c4c4c4;
-    width: 60%;
+#section-one .intro{
+    width: 100%;
+    height: 40vh;
+    margin: 1.2em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-
-    /* Boxes introducing the activity */
+.intro .wrap{
+    color: var(--darkBlue1);
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 #section-one #boxes{
+    width: 100%;
+    height: 40vh;
+    margin: 1.2em;
     display: flex;
-    flex-direction: row;
     text-align: center;
     justify-content: space-evenly;
 }
 
+    /* Intro, text and image */
+
+.intro h2{
+    font-size: 2.5rem;
+}
+
+.intro img{
+    width: 40%;
+}
+
+    /* Boxes introducing the activity */
+
+
 #section-one #presentBox{
-    width: 250px;
-    margin: 0 10px;
-    border-radius: 2%;
-    color: var(--darkBlue2);
+    border: 1px solid var(--darkBlue1);
+    width: 20%;
+    margin: 0 0.75em;
+    padding: 0.75 0;
+    border-radius: 3%;
+    color: var(--darkBlue1);
     transition: all 0.2s ease-in-out;
 }
 
 #presentBox:hover,
 #presentBox:focus{
-    cursor: pointer;
-    box-shadow: 0px 0px 3px var(--darkBlue1);
+    box-shadow: 0px 0px 3px var(--lightBlue3);
 }
 
 #presentBox i{
@@ -163,23 +187,55 @@
     padding: 1.2rem 0;
     border-radius: 50%;
     color: #fff;
-    margin-top: 0.8rem;
+    margin: 1.2rem;
     font-size: 2.5rem;
-    background-color: var(--darkBlue2);
+    background-color: var(--darkBlue1);
 }
 
 #presentBox h3{
-    margin-top: 10px;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 #presentBox p{
-    padding: 15px;
-    font-size: 15px;
+    padding: 0.9em;
+    font-size: 0.9rem;
 }
+
+#presentBox button{
+    margin: 1.2rem;
+    background-color: var(--darkBlue1);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: .7em 1.3em;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 2px solid var(--darkBlue1);
+}
+
+#presentBox #box-btn:hover, 
+#presentBox #box-btn:focus{
+    background-color: #fff;
+    border: 2px solid var(--darkBlue1);
+    color: var(--darkBlue1);
+} 
 
             /* Animations */
 
+    /* Navbar animations*/
+
+@keyframes highlightIcon {
+    0%{
+        text-shadow: 0px 0px 0px #fff;
+    }
+    50%{
+        text-shadow: 0px 0px 5px #fff;
+    }
+    0% {
+        text-shadow: 0px 0px 0px #fff;
+    }
+}
 
     /* Animation for landing page */
 @keyframes slideWelcomePage {
