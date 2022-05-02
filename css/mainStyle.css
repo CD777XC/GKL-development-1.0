@@ -39,7 +39,7 @@
 
 #section-one .picture{
 /* Visual */
-    width: 30%;
+    width: 100%;
     background-image: url(/img/Backgrounds/left-landing.jpg);
     background-size: cover;
     background-attachment: local;
