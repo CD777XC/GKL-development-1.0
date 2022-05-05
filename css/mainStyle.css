@@ -24,37 +24,42 @@
     --gray4: #979DAC;
 }
 
+img{
+    width: 100%;
+    display: block;
+}
+
             /* Section 1 / Landing page */
 
 #section-one{
 /* Visual */
-    height: 100vh;
     width: 100%;
 /* Flexbox */
     display: flex;
     text-align: center;
+/* Background */
+background-image: url(/img/Backgrounds/left-landing.jpg);
+background-size: cover;
+background-attachment: fixed;
 }
 
     /* Left page */
 
 #section-one .picture{
 /* Visual */
-    width: 100%;
-    background-image: url(/img/Backgrounds/left-landing.jpg);
-    background-size: cover;
-    background-attachment: local;
+    width: 30%;
+/* Flexbox */
+    display: flex;
+    align-items: center;
 }
 
 #logo{
     margin: 0 auto;
-    width: 70%;
+    width: 100%;
     color: #fff;
     font-size: 5rem;
     text-align: center;
     letter-spacing: 20px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
 }
 #logo p{
     margin-top: -10px;
@@ -130,20 +135,21 @@
 #section-one .presentation{
 /* Visual */
     display: none;
-    padding: 0 10px;
+    padding: 0 1em;
     width: 70%;
     height: 100vh;
 /* Flexbox (after loaded) */
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
+/* Background */
+    background-color: #fff;
 /* Transitions & animations */
     animation: clarifyPresentation 1s;
 }
 
 #section-one .intro{
 /* Visual */
-    height: 45%;
     width: 100%;
 /* Flexbox */
     display: flex;
@@ -154,7 +160,6 @@
 .intro .wrap{
 /* Visual */
     width: 40%;
-    height: 100%;
 /* Flexbox */
     display: flex;
     flex-direction: column;
@@ -165,7 +170,6 @@
 
 #section-one #boxes{
 /* Visual */
-    height: 45%;
     width: 100%;
 /* Flexbox */
     display: flex;
@@ -196,7 +200,6 @@
 #section-one #presentBox{
 /* Visual */
     width: 20%;
-    height: 90%;
     padding: 2em 0;
     margin: 0 auto;
 /* Flexbox */
@@ -274,10 +277,10 @@
     /* Animation for landing page */
 @keyframes slideWelcomePage {
     0%{
-        width: 100%;
+        width: 100vw;
     }
     100%{
-        width: 30%;
+        width: 30vw;
     }
 }
 
@@ -294,8 +297,84 @@
     /* Media queries */
 
 @media (max-width: 1600px) {
-    .navLinks{
+    .navLinks a{
         text-align: center;
-        font-size: 1.25rem;
+        font-size: 1.4rem;
+        padding: .1em .35em;
+    }
+}
+
+@media (max-width: 1380px) {
+
+    #section-one{
+        /* Visual */
+        width: 100vw;
+        height: 130vh;
+        /* Flexbox */
+        flex-direction: column;
+        /* Background */
+        background-image: url(/img/Backgrounds/left-landing.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .picture, 
+    .presentation {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .picture{
+        height: 15vh;
+        font-size: .5rem;
+    }
+    .presentation{
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    /* Header */
+
+    #logo{
+        font-size: 3rem;
+        margin-bottom: .7rem;
+    }
+    
+    .overlayNav{
+        /* Visual */
+        height: 15vh;
+        width:70%;
+        left: 15%;
+        /* Background and borders */
+        background-color: #fff;
+        border-radius: 5px;
+        border-bottom: 2px solid var(--gray2);
+    }
+    
+    .navLinks{
+        top: 30%;
+    }
+    
+    .navLinks a{
+        /* Visual */
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--darkBlue1);
+        /* Background & borders */
+        padding: .2em .7em;
+        margin: 0 1em;
+    }
+    .navLinks a:hover{
+        background-color: var(--darkBlue1);
+        color: #fff;
+    }
+
+    /* Keyframes */
+    @keyframes slideWelcomePage {
+        0% {
+            height: 100vh;
+        }
+    
+        100% {
+            height: 15vh;
+        }
     }
 }
