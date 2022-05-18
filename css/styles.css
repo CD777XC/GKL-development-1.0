@@ -79,8 +79,49 @@ img {
 }
 
 /* 
+Welcome User
+*/
+
+.container-welcome {
+  /* Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Background */
+  background-color: #e3e3e3;
+  /* Transitions and transformation */
+  transform: translateY(0%);
+  transition: all 2s ease;
+}
+
+.container-welcome-text,
+.container-welcome-text-typing {
+  /* Visual */
+  font-size: 2rem;
+  letter-spacing: 2px;
+  word-spacing: 0.25rem;
+}
+
+.container-welcome-text-typing {
+  animation: welcomeTextTyping 1s infinite;
+}
+
+@keyframes welcomeTextTyping {
+  0% {
+    color: #e3e3e3;
+  }
+  70% {
+    color: #e3e3e3;
+  }
+  100% {
+    color: black;
+  }
+}
+
+/* 
 Header
- */
+*/
 
 header {
   margin-bottom: 1em;
@@ -111,7 +152,7 @@ header {
 
 /* 
 Navigations links & bar
- */
+*/
 
 .fa-bars,
 .container-navLinks {
@@ -198,7 +239,9 @@ section {
   border-bottom: 1px solid var(--gray4);
 }
 
-/* Boxes sections */
+/*
+Boxes sections 
+*/
 
 .container-box {
   /* Visual */
@@ -216,7 +259,9 @@ section {
   border: none;
 }
 
-/* Container box wrap */
+/* 
+Container box wrap 
+*/
 
 .container-box-wrap {
   /* Flexbox */
@@ -261,7 +306,9 @@ section {
   color: var(--gray2);
 }
 
-/* Container box hidden */
+/*
+ Container box hidden 
+*/
 
 .container-box-hidden {
   /* Visual */
