@@ -1,14 +1,19 @@
-# The ideas:
+This is the 2.0 version of GKL development portfolio.
 
-My portfolio (not finished at all):
+Mobile version as been set as a priority, currently working on smartphone and computer.
 
-Find me online on this address:
-  
-  www.gkldevelopment.com
+Work to be done before next deployment:
 
-The website is being developped and I will add links to my projects, to what I am working on and in mid 2022 I will start developping apps/ideas that concerns hotel management activite and hospitality industry to make the work more efficient.
+    Work on next pages. (about and contact = empty)
+    Develop more interaction based on JS.
+    Check for color palette. Maybe some more tonic and fine colors.
 
+JSON file to be created in order to collect data from the user
 
 Credits :
 
-  Landing page first pictures : Vecteezy.com
+Landing page first pictures : Vecteezy.com
+
+Find me online on this address:
+
+www.gkldevelopment.com
