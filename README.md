@@ -12,7 +12,8 @@ JSON file to be created in order to collect data from the user
 
 Credits :
 
-Landing page first pictures : Vecteezy.com
+    Index.html: Vecteezy.com
+    About.html: http://www.freepik.com (Designed by vectorjuice / Freepik)
 
 Find me online on this address:
 
